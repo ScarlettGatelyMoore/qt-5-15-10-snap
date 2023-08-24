@@ -1,0 +1,31 @@
+Index: qtbase-everywhere-src-5.15.2/src/corelib/configure.json
+===================================================================
+--- qtbase-everywhere-src-5.15.2.orig/src/corelib/configure.json
++++ qtbase-everywhere-src-5.15.2/src/corelib/configure.json
+@@ -639,7 +639,7 @@
+         },
+         "getentropy": {
+             "label": "getentropy()",
+-            "condition": "config.unix && tests.getentropy",
++            "disable": "true",
+             "output": [ "privateFeature" ]
+         },
+         "glib": {
+@@ -781,7 +781,7 @@
+         },
+         "renameat2": {
+             "label": "renameat2()",
+-            "condition": "config.linux && tests.renameat2",
++            "disable": "true",
+             "output": [ "privateFeature" ]
+         },
+         "slog2": {
+@@ -791,7 +791,7 @@
+         },
+         "statx": {
+             "label": "statx() in libc",
+-            "condition": "config.linux && tests.statx",
++            "disable": "true",
+             "output": [ "privateFeature" ]
+         },
+         "syslog": {
