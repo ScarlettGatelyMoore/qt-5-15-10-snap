@@ -17,7 +17,7 @@ compression: lzo
 parts:
   patches:
     plugin: dump
-    source: snap/local/patches
+    source: local/patches
     source-type: local
     prime:
     - -*
