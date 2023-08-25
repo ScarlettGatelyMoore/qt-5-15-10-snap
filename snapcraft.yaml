@@ -490,12 +490,11 @@ parts:
     plugin: nil
     override-pull: |
       QT=5_15_10
-      git clone -b kde/5.15 --depth=1 https://invent.kde.org/qt/qt/qt5.git .
+      git clone -b kde/5.15 --depth=1 https://invent.kde.org/qt/qt/qt5.git
+      cd qt5
       perl init-repository --module-subset=qtbase
       git submodule update qtbase
-
-      cd qt5
-      find $CRAFT_STAGE/qt5 -type f -print0 | sort -z | xargs -r0 git apply
+      find $CRAFT_STAGE/qtbase -type f -print0 | sort -z | xargs -r0 git apply
     override-build: |
       ./configure \
           -prefix /usr \
