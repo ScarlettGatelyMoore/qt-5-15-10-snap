@@ -201,7 +201,7 @@ parts:
 
   ffnvcodec:
     source: https://github.com/FFmpeg/nv-codec-headers.git
-    source-tag: sdk/10.0
+    source-tag: sdk/12.0
     plugin: make
     make-parameters:
       - PREFIX=/usr
