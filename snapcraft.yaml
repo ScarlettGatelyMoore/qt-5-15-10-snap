@@ -429,7 +429,7 @@ parts:
       - libpango-1.0-0
       - libpangocairo-1.0-0
       - libpangoft2-1.0-0
-      - libpgm-5.2-0
+      - libpgm-5.3-0
       - libpixman-1-0
       - libpng16-16
       - libpulse0
