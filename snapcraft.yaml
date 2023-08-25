@@ -495,7 +495,7 @@ parts:
       git submodule update qtbase
 
       cd qtbase
-      find $CRAFT_STAGE/qtbase_${QT} -type f -print0 | sort -z | xargs -r0 git apply
+      find $CRAFT_STAGE/qtbase -type f -print0 | sort -z | xargs -r0 git apply
     override-build: |
       ./configure \
           -prefix /usr \
