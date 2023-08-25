@@ -490,7 +490,7 @@ parts:
     plugin: nil
     override-pull: |
       QT=5_15_10
-      git clone -b v5.15.10-lts-lgpl --depth=1 https://invent.kde.org/qt/qt/qt5.git .
+      git clone -b kde/5.15 --depth=1 https://invent.kde.org/qt/qt/qt5.git .
       perl init-repository --module-subset=qtbase
       git submodule update qtbase
 
