@@ -462,7 +462,7 @@ parts:
       - libvorbis0a
       - libvorbisenc2
       - libvorbisfile3
-      - libvpx6
+      - libvpx7
       - libwebp6
       - libwebpmux3
       - libx11-6
