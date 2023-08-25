@@ -463,7 +463,7 @@ parts:
       - libvorbisenc2
       - libvorbisfile3
       - libvpx7
-      - libwebp6
+      - libwebp7
       - libwebpmux3
       - libx11-6
       - libx265-199
@@ -736,7 +736,7 @@ parts:
       - libmng-dev
     stage-packages:
       - libmng2
-      - libwebpdemux2
+      - libwebpdemux3
   qtnetworkauth:
     after: [ qtbase ]
     source: https://invent.kde.org/qt/qt/qtnetworkauth.git
