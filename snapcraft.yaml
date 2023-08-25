@@ -603,7 +603,7 @@ parts:
       - libsasl2-2
       - libsm6
       - libsqlite3-0
-      - libssl1.1
+      - libssl3
       - libsybdb5
       - libudev1
       - libvulkan1
