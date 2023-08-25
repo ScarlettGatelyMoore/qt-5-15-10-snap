@@ -494,7 +494,7 @@ parts:
       cd qt5
       perl init-repository --module-subset=qtbase
       git submodule update qtbase
-      find $CRAFT_STAGE/qtbase -type f -print0 | sort -z | xargs -r0 git apply
+ #     find $CRAFT_STAGE/qtbase -type f -print0 | sort -z | xargs -r0 git apply
     override-build: |
       ./configure \
           -prefix /usr \
