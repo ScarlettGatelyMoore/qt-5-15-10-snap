@@ -179,6 +179,7 @@ parts:
     build-packages:
       - doxygen
       - nasm
+      - meson
     prime:
       - -usr/include
       - -usr/lib/$CRAFT_ARCH_TRIPLET/pkgconfig
