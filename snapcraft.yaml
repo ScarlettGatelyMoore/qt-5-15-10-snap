@@ -1461,7 +1461,7 @@ parts:
     plugin: nil
     override-build: |
       if [ $CRAFT_TARGET_ARCH != "ppc64el" ]; then
-        snap install qtwebengine-5-15-18 --candidate && returncode=$? || returncode=$?
+        snap install qtwebengine-5-15-18 --edge && returncode=$? || returncode=$?
         # This conditional ensures the SDK is built without Webengine for the first revision.
         # The QtWebengine snap is then able to use this SDK snap to build Webengine, allowing it to be included in subsequent revisions of this snap.
         if [ $returncode -ne 0 ]; then
