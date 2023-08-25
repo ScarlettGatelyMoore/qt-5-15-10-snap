@@ -1,5 +1,5 @@
 ---
-name: qt-5-15-10-snap-sdk
+name: qt-5-15-10-sdk
 version: 5.15.10
 base: core22
 summary: Shared Qt 5.15.10
@@ -388,9 +388,9 @@ parts:
       - libcairo2
       - libcdio-cdda2
       - libcdio-paranoia2
-      - libcdio18
+      - libcdio19
       - libchromaprint1
-      - libcodec2-0.9
+      - libcodec2-1.0
       - libdatrie1
       - libdc1394-25
       - libdrm2
@@ -409,7 +409,7 @@ parts:
       - libgraphite2-3
       - libgsm1
       - libharfbuzz0b
-      - libicu66
+      - libicu70
       - libiec61883-0
       - libjack-jackd2-0
       - liblilv-0-0
@@ -529,7 +529,7 @@ parts:
       rm -rf $CRAFT_STAGE/../parts/qtbase/src/.git
     build-packages:
       - libatspi2.0-dev
-      - libclang-6.0-dev
+      - libclang-15-dev
       - libcups2-dev
       - libdbus-1-dev
       - libegl1-mesa-dev
@@ -564,7 +564,7 @@ parts:
       - libxkbcommon-x11-dev
       - libxkbcommon-dev
       - libxrandr-dev
-      - llvm-6.0
+      - llvm-15-dev
       - unixodbc-dev
     stage-packages:
       - libasn1-8-heimdal
@@ -929,8 +929,8 @@ parts:
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
     stage-packages:
-      - libclang1-6.0
-      - libllvm6.0
+      - libclang1-15
+      - libllvm15
   qtconnectivity:
     after: [ qtdeclarative ]
     source: https://invent.kde.org/qt/qt/qtconnectivity.git
