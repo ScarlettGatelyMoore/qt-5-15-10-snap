@@ -390,7 +390,7 @@ parts:
   qtscript:
     after: [ qtbase ]
     source: https://invent.kde.org/qt/qt/qtscript.git
-    source-tag: v$CRAFT_PROJECT_VERSION-lts
+    source-tag: kde/5.15
     plugin: nil
     build-environment:
       - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET:$LD_LIBRARY_PATH
