@@ -2,7 +2,7 @@
 name: qt-5-15-10-sdk
 version: 5.15.10
 base: core22
-summary: Shared Qt 5.15.10
+summary: Shared Qt 5.15.10 with the KDE patch set
 description: |
  This snap contains the necessary libraries required by
  Qt Applications.
@@ -46,15 +46,10 @@ parts:
     - -usr/share/man
     - -usr/share/pkgconfig
   qtbase:
-    after: [ ffmpeg, patches, mesa ]
+    after: [ patches, mesa ]
     plugin: nil
-    override-pull: |
-      QT=5_15_10
-      git clone -b kde/5.15 --depth=1 https://invent.kde.org/qt/qt/qt5.git
-      cd qt5
-      perl init-repository --module-subset=qtbase
-      git submodule update qtbase
- #     find $CRAFT_STAGE/qtbase -type f -print0 | sort -z | xargs -r0 git apply
+    source: https://invent.kde.org/qt/qt/qt5.git
+    source-branch: kde/5.15
     override-build: |
       ./configure \
           -prefix /usr \
