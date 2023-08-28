@@ -290,7 +290,7 @@ parts:
       - libmng-dev
     stage-packages:
       - libmng2
-      - libwebpdemux3
+      - libwebpdemux2
   qtnetworkauth:
     after: [ qtbase ]
     source: https://invent.kde.org/qt/qt/qtnetworkauth.git
