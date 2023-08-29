@@ -539,7 +539,7 @@ parts:
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
   qtdoc:
-    after: [ qtdeclarative ]
+    after: [ qttools ]
     source: https://invent.kde.org/qt/qt/qtdoc.git
     source-branch: kde/5.15
     plugin: nil
