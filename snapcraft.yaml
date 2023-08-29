@@ -543,6 +543,8 @@ parts:
     source: https://invent.kde.org/qt/qt/qtdoc.git
     source-branch: kde/5.15
     plugin: nil
+    build-packages:
+    - qtattributionsscanner-qt5
     build-environment:
       - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
       - PATH: $CRAFT_STAGE/usr/bin:$PATH
