@@ -466,7 +466,6 @@ parts:
     - qtbase
     - qtdeclarative
     - qtmultimedia
-    - qtopen
     source: https://invent.kde.org/qt/qt/qttools.git
     source-branch: kde/5.15
     plugin: nil
