@@ -460,7 +460,12 @@ parts:
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
   qttools:
-    after: [ qtdeclarative ]
+    after:
+    - qtdeclarative
+    - qtxmlpatterns
+    - qtbase
+    - qtdeclarative
+    - qtmultimedia
     source: https://invent.kde.org/qt/qt/qttools.git
     source-branch: kde/5.15
     plugin: nil
@@ -539,7 +544,14 @@ parts:
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
   qtdoc:
-    after: [ qttools ]
+    after:
+    - qtdeclarative
+    - qtxmlpatterns
+    - qtbase
+    - qtdeclarative
+    - qtmultimedia
+    - qttools
+    - qtwebengine
     source: https://invent.kde.org/qt/qt/qtdoc.git
     source-branch: kde/5.15
     plugin: nil
