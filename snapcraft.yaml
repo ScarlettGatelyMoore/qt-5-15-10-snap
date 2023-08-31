@@ -561,7 +561,7 @@ parts:
     build-environment:
         - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
         - PATH: $CRAFT_STAGE/usr/bin${PATH:+:$PATH}
-      - QT_INSTALL_DOCS: $CRAFT_PART_INSTALL/usr/share/qt5/doc
+        - QT_INSTALL_DOCS: $CRAFT_PART_INSTALL/usr/share/qt5/doc
     override-build: |
       # $CRAFT_STAGE/usr/lib/qt5/bin/qmake -qtconf "$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qt.conf"
       #$CRAFT_STAGE/usr/lib/qt5/bin/qmake -query
