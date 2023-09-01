@@ -546,39 +546,39 @@ parts:
     prime:
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
       - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
-  qtdoc:
-    after:
-    - qtdeclarative
-    - qtxmlpatterns
-    - qtbase
-    - qtdeclarative
-    - qtmultimedia
-    - qttools
-    - qtwebengine
-    source: https://invent.kde.org/qt/qt/qtdoc.git
-    source-branch: kde/5.15
-    plugin: nil
-    build-environment:
-        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
-        - PATH: $CRAFT_STAGE/usr/bin${PATH:+:$PATH}
-        - QT_INSTALL_DOCS: $CRAFT_PART_INSTALL/usr/share/qt5/doc
-    override-build: |
-      # $CRAFT_STAGE/usr/lib/qt5/bin/qmake -qtconf "$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qt.conf"
-      #$CRAFT_STAGE/usr/lib/qt5/bin/qmake -query
-      $CRAFT_STAGE/usr/lib/qt5/bin/qmake
-      make -j$CRAFT_PARALLEL_BUILD_COUNT docs
-      # make INSTALL_ROOT="$CRAFT_PART_INSTALL/tmp" install
-      # cp -a "$CRAFT_PART_INSTALL/tmp$CRAFT_STAGE/." "$CRAFT_PART_INSTALL"
-    override-stage: |
-      craftctl default
-      # Cleanup space on build VM to prevent running out of disk space for later parts
-      rm -rf $CRAFT_STAGE/../parts/qtdoc/build/*
-      rm -rf $CRAFT_STAGE/../parts/qtdoc/src/*
-      rm -rf $CRAFT_STAGE/../parts/qtdoc/build/.git
-      rm -rf $CRAFT_STAGE/../parts/qtdoc/src/.git
-    prime:
-      - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
-      - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
+  # qtdoc:
+  #   after:
+  #   - qtdeclarative
+  #   - qtxmlpatterns
+  #   - qtbase
+  #   - qtdeclarative
+  #   - qtmultimedia
+  #   - qttools
+  #   - qtwebengine
+  #   source: https://invent.kde.org/qt/qt/qtdoc.git
+  #   source-branch: kde/5.15
+  #   plugin: nil
+  #   build-environment:
+  #       - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+  #       - PATH: $CRAFT_STAGE/usr/bin${PATH:+:$PATH}
+  #       - QT_INSTALL_DOCS: $CRAFT_PART_INSTALL/usr/share/qt5/doc
+  #   override-build: |
+  #     # $CRAFT_STAGE/usr/lib/qt5/bin/qmake -qtconf "$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qt.conf"
+  #     #$CRAFT_STAGE/usr/lib/qt5/bin/qmake -query
+  #     $CRAFT_STAGE/usr/lib/qt5/bin/qmake
+  #     make -j$CRAFT_PARALLEL_BUILD_COUNT docs
+  #     # make INSTALL_ROOT="$CRAFT_PART_INSTALL/tmp" install
+  #     # cp -a "$CRAFT_PART_INSTALL/tmp$CRAFT_STAGE/." "$CRAFT_PART_INSTALL"
+  #   override-stage: |
+  #     craftctl default
+  #     # Cleanup space on build VM to prevent running out of disk space for later parts
+  #     rm -rf $CRAFT_STAGE/../parts/qtdoc/build/*
+  #     rm -rf $CRAFT_STAGE/../parts/qtdoc/src/*
+  #     rm -rf $CRAFT_STAGE/../parts/qtdoc/build/.git
+  #     rm -rf $CRAFT_STAGE/../parts/qtdoc/src/.git
+  #   prime:
+  #     - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.la
+  #     - -./usr/lib/$CRAFT_ARCH_TRIPLET/*.prl
   qtlottie:
     after: [ qtdeclarative ]
     source: https://invent.kde.org/qt/qt/qtlottie.git
